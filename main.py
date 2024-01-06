@@ -24,7 +24,7 @@ except ValueError:
 '''
 
 
-try:
+'''try:
     num1 = float(input("Введіть перше число: "))
     num2 = float(input("Введіть друге число: "))
 
@@ -34,4 +34,25 @@ try:
         smaller, larger = min(num1, num2), max(num1, num2)
         print(f"Числа не рівні. В порядку зростання:{smaller},{larger}")
 except ValueError:
-    print("Будь ласка, введіть коректні числа.")
+    print("Будь ласка, введіть коректні числа.")'''
+
+try:
+    num1 = float(input("Введіть перше число:"))
+    num2 = float(input("Введіть друге число:"))
+    operation = (input("Виберіть дію: +, -, /, : "))
+    match operation:
+        case "+":
+            print(num1 + num2)
+        case "-":
+            print(num2 - num1)
+        case "":
+            print(num1 * num2)
+        case "/":
+            if num2 != 0:
+                print(num1 / num2)
+            else:
+                print("На нуль ділити не можна")
+        case _:
+            print("Введене некоректне число")
+except ValueError:
+    print("Будь ласка, введіть коректні числа."
